@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 ::after,
 ::before {
@@ -12,7 +13,13 @@ body {
   font: 16px/1.5 sans-serif;
 }
 
+.kontejner {
+  display: flex;
+  flex-direction: column;
+}
+
 .sloupec {
+  width: 100%;
   padding: 30px;
   font-size: 24px;
   text-align: center;
@@ -22,11 +29,19 @@ body {
 .sloupec:nth-child(1) {
   background-color: #3498db;
 }
+
 .sloupec:nth-child(2) {
   background-color: #e74c3c;
 }
+
 .sloupec:nth-child(3) {
   background-color: #2ecc71;
+}
+
+@media (min-width: 800px) {
+  .kontejner {
+    flex-direction: row;
+  }
 }
 
 /*
